@@ -1,8 +1,10 @@
 class Assignment:
+    @staticmethod
     def is_grade(self, grade):
         if grade >= 90:
             print(f'Congratulations! Your grade of {grade} earns you an A in this course')
 
+    @staticmethod
     def box_of(self, egg):
         box = egg // 6
         rem = egg % 6
@@ -13,18 +15,21 @@ class Assignment:
             print(f'{box} boxes are needed with a remainder of {rem} eggs.')
             print(f'{new_box} eggs are needed to complete the box.')
 
+    @staticmethod
     def bacteria_start_with(self, bacteria):
         print(f'Hour\t\tNumber of Bacteria')
         for hours in range(0, 20, 5):
             output = bacteria * 2 * hours
             print(f'{hours}\t\t\t{output}')
 
+    @staticmethod
     def hourly_wage(self, good, bad, principal):
         good_new_hourly_wage = principal * ((1 + 0.03) ** good)
         print(f'After {good} years of good reviews, new hourly wage is ${good_new_hourly_wage : .2f}')
         bad_new_hourly_wage = principal * ((1 - 0.03) ** bad)
         print(f'After {bad} years of bad reviews, new hourly wage is ${bad_new_hourly_wage : .2f}')
 
+    @staticmethod
     def heart_rate(self):
         age = int(input('Enter your age: '))
         maximum_heart_rate = 220 - age
@@ -33,6 +38,7 @@ class Assignment:
         print(f'Maximum heart rate: {maximum_heart_rate}bpm')
         print(f'Target heart rate is {target_heart_rate}bpm to {target_heart_rate_2}bpm.')
 
+    @staticmethod
     def turing_test(self):
         problem = input('What is your problem? ')
         history = input(f'Have you had this problem {problem} before? (yes or no)')
@@ -52,6 +58,7 @@ class Assignment:
                     elif history == 'no':
                         print('Well, you have it now.')
 
+    @staticmethod
     def flu(self):
         total_cases = 0
         smallest_case = 9999999
@@ -69,12 +76,14 @@ class Assignment:
         print(f'Smallest case is {smallest_case}')
         print(f'Largest case is {largest_case}')
 
+    @staticmethod
     def equilateral_triangle(self, side_2, side_3):
         if self == side_2 and side_2 == side_3:
             print('Equilateral triangle')
         else:
             print('Not an equilateral triangle')
 
+    @staticmethod
     def fibonacci(position):
         total = 0
         count = 0
@@ -92,6 +101,7 @@ class Assignment:
                 count += 1
         print(f'The number in position {position} is {total}')
 
+    @staticmethod
     def palindrome(number):
         temp = number
         summation = 0
@@ -106,7 +116,7 @@ class Assignment:
 
     @staticmethod
     def extract(number):
-        # technique to use M A D, M for modulus % , A for addition + , D for Division //
+        # technique to use M A D, M for modulus % , A for addition + , D for Division
         number = int(input("Enter a number"))
         reverse = 0
         i = number
@@ -124,6 +134,7 @@ class Assignment:
             for y in range(1, 11):
                 print(x, "*", y, "=", x * y)
 
+
 if __name__ == '__main__':
     assignment = Assignment()
     assignment.is_grade(98)
@@ -138,6 +149,3 @@ if __name__ == '__main__':
     assignment.palindrome(123)
     assignment.extract(12345)
     assignment.multiplication_table()
-
-
-
